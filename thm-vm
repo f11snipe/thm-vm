@@ -74,7 +74,8 @@ connectVpn() {
     warn "🤨 THM VPN is not running!"
     warn "Searching for process: '$vpn_file' (using ps aux | grep ...)"
 
-    if confirmYes "Connect to VPN now?"; then
+    if confirmYes "Connect to VPN now? (requires sudo)"; then
+      sudo echo "init" > $session_log
       sudo -b openvpn $vpn_file > $session_log 2>&1 &
 
       log "Done! 😁"
@@ -122,6 +123,4 @@ elif [[ $arg1 =~ $valid_ip ]]; then
   fi
 else
   connectVpn
-
-  log "YAY"
 fi
