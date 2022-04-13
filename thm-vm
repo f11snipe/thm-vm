@@ -122,4 +122,6 @@ elif [[ $arg1 =~ $valid_ip ]]; then
   fi
 else
   connectVpn
+
+  log "YAY"
 fi
