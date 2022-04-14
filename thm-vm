@@ -4,7 +4,7 @@
 username="F11snipe"
 
 # Define directory were $username.ovpn is located
-vpn_dir="/home/charlie/.vpn"
+vpn_dir="$HOME/.vpn"
 
 # Define variable for our search string (find this running process)
 vpn_file="$vpn_dir/$username.ovpn"
